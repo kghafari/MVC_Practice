@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "CalculatorForm";
+}
+
+<h1>Let's do some math:</h1>
+
+
+<form action="../SimpleCalculator/CalculatorResult" method="post">
+    <input type="number" name="Num1" placeholder="Number 1" />
+    <br />
+
+    <div id="mathguys">
+        <input type="text" name="Operator" placeholder="Pick one: + - * / " />
+    </div>
+
+    <input type="number" name="Num2" placeholder="Number 2" /> <br />
+
+    <input type="submit" />
+</form>

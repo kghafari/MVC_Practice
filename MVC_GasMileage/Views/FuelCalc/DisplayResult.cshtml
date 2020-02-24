@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayResult";
+}
+@model FuelCalculator
+@{
+    FuelCalculator calculator = Model;
+
+}
+
+<h3>You can drive @calculator.Result miles.</h3>
+<h5>Your trip is @calculator.TripDistance miles.</h5>
+@if (calculator.ResultString.Contains("more"))
+{
+    <h5 style="color:red;">@calculator.ResultString</h5>
+}
+else
+{
+    <h5 style="color:green;">@calculator.ResultString</h5>
+}

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "MileageForm";
+}
+
+<h1>Mileage Form</h1>
+
+@*so, when we make our form, we need to point the 'action' file path to the controller and method that will receive the inputs
+        in this case, we're pointing to ../FuelCalc/MileageForm so we can pass through the 'MPG' and 'gallons' inputs, do math to them
+        once we do math to them, I'll output them on a seperate view using the @model Razor magic*@
+<form action="../FuelCalc/DisplayResult" method="post">
+    Mileage(MPG) <input type="number" name="MPG" />
+    Gallons of fuel <input type="number" name="FuelRemaining" /> <br />
+    Trip Distance <input type="number" name="TripDistance"/>
+
+    <input type="submit" value="How far can you go?" />
+</form>

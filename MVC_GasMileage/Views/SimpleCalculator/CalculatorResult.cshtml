@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "CalculatorResult";
+}
+
+@model SimpleCalculator
+@{
+    SimpleCalculator calculator = Model;
+
+}
+
+
+<h1>Calculator Result:</h1>
+
+<h5>@calculator.Num1 @calculator.Operator @calculator.Num2 = @calculator.Result</h5>
+@if(calculator.Error != null)
+{
+    <h2><span style="color:red;">@calculator.Operator</span> is not a valid operator. Ya done goofed.</h2>
+}
+
